@@ -73,6 +73,10 @@ h6 {
   background: transparent;
 }
 
+#header.header-detail {
+  background: rgba(25, 28, 31, 0.8) !important;
+}
+
 #header.header-scrolled {
   height: 60px;
   background: rgba(25, 28, 31, 0.8);
@@ -379,12 +383,26 @@ h6 {
   }
 
   #hero p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
     margin-bottom: 25px;
   }
 }
 
+@media (max-width: 280px) {
+  #hero h1 {
+    margin-left: 20px;
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  #hero p {
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 25px;
+  }
+}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -488,6 +506,20 @@ section {
   max-width: 100%;
 }
 
+@media (max-width: 368px) {
+  .img-container {
+    display: flex;
+    justify-content: center; 
+    height: 244px;
+  }
+  
+  .img-container img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
@@ -544,6 +576,13 @@ section {
   padding-bottom: 15px;
 }
 
+@media (max-width: 550px) {
+  .lang-list ul li {
+    font-size: 50px;
+    padding: 20px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Resume
@@ -594,6 +633,7 @@ section {
   font-weight: 600;
   --bs-btn-hover-bg: #ffb727;
   --bs-btn-hover-color: #000;
+  --bs-btn-active-bg: rgba(255, 168, 39, 0.5);
 
 }
 
@@ -824,8 +864,8 @@ section {
 
 .icon-box {
   background-color: #e0e7f0;
-  padding: 15px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8)
+  padding: 25px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6)
 }
 
 /*--------------------------------------------------------------
@@ -906,17 +946,13 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links p {
-  color: #fff;
+  color: #000;
   font-family: ;
   font-size: 28px;
   text-align: center;
-  background: rgba(46, 99, 55, 0.5);
+  background: #ffb727;
   transition: 0.3s;
   width: 100%;
-}
-
-.portfolio .portfolio-wrap .portfolio-links p:hover {
-  background: #2e6337;
 }
 
 .portfolio .portfolio-wrap .portfolio-links p+p {
@@ -944,15 +980,6 @@ section {
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
-.sub-cat {
-  padding-left: 30px;
-  font-size: 14px !important;
-}
-
-.buffer {
- padding-top: 10%;
-}
-
 .portfolio-details {
   padding-top: 40px;
 }
@@ -980,7 +1007,7 @@ section {
 
 .portfolio-details .portfolio-info {
   padding: 30px;
-  box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
+  box-shadow: 0px 0 30px rgba(59, 67, 74, 0.08);
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -995,10 +1022,6 @@ section {
   list-style: none;
   padding: 0;
   font-size: 15px;
-}
-
-.portfolio-details .portfolio-info a {
-  font-size: 13px;
 }
 
 .portfolio-details .portfolio-info ul li+li {
@@ -1023,11 +1046,73 @@ section {
   display: none;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 768px) {
   #return-button {
     display: inline;
   }
 }
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 20px 0;
+  background-color: #f4f5f6;
+  min-height: 40px;
+  margin-top: 78px;
+}
+
+@media (max-width: 992px) {
+  .breadcrumbs {
+    margin-top: 60px;
+  }
+}
+
+.breadcrumbs h2 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .breadcrumbs h2 {
+    margin: 0 0 10px 0;
+  }
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #6c757d;
+  content: "/";
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+
+  .breadcrumbs ol {
+    display: block;
+  }
+
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -1064,7 +1149,7 @@ section {
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: #98b39c;
+  color: #ffb727;
   font-size: 26px;
 }
 
@@ -1121,6 +1206,14 @@ section {
   background-color: #2e6337;
 }
 
+@media (max-width: 320px) {
+
+  .testimonials .section-title h2 {
+    font-size: 26px;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -1130,7 +1223,7 @@ section {
   color: #fff;
   font-size: 14px;
   text-align: center;
-  padding: 80px 0;
+  padding: 30px 0;
   position: relative;
 }
 
@@ -1149,11 +1242,8 @@ section {
 }
 
 #footer h3 {
-  font-size: 36px;
-  font-weight: 700;
   color: #fff;
   position: relative;
-  font-family: "Satisfy", serif;
   padding: 0;
   margin: 0 0 15px 0;
 }
@@ -1163,11 +1253,11 @@ section {
   font-size: 18px;
 }
 
-#footer p {
+#footer li {
   font-size: 15;
   font-style: italic;
   padding: 0;
-  margin: 0 0 40px 0;
+  margin: 15px 0 15px 0;
 }
 
 #footer .social-links {
@@ -1177,7 +1267,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #ffb727;
+  background: #2e6337;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1190,7 +1280,7 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #f3a200;
+  background: #06a723;
   color: #fff;
   text-decoration: none;
 }
