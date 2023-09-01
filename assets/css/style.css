@@ -321,6 +321,7 @@ h6 {
 #hero:before {
   content: "";
   background: rgba(5, 13, 24, 0.8);
+  background-size: cover;
   position: absolute;
   bottom: 0;
   top: 0;
@@ -504,6 +505,26 @@ section {
 .img-container img {
   max-height: 100%;
   max-width: 100%;
+}
+
+@media (max-width: 991px) {
+  .about-pad {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px ) {
+  .img-container {
+    display: flex;
+    justify-content: center; 
+    height: 289px;
+    margin-top: 60px;
+  }
+  
+  .img-container img {
+    max-height: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 368px) {
