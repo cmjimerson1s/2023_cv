@@ -1264,6 +1264,11 @@ section {
   position: relative;
 }
 
+#footer h5 a {
+  color: #fff;
+  margin-left: 10px;
+}
+
 #footer h3 {
   color: #fff;
   position: relative;
